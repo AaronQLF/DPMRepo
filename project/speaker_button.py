@@ -26,7 +26,6 @@ def play_sound_on_button_press():
         while True:
             if TOUCH_SENSOR.is_pressed():
                 play_sound()
-                
     except BaseException:  # capture all exceptions including KeyboardInterrupt (Ctrl-C)
         exit()
 
