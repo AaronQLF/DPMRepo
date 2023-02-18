@@ -30,7 +30,7 @@ def continuous_sound_touch_sensor():
                 value = US_SENSOR.get_value()
                 if value is not None :
                     if (value > 40):
-                        Motor.run_forever(speed_sp=1000)
+                        Motor.on_for_seconds(speed=SpeedRPM(100), seconds=3)
                     sound.Sound(duration=0.3,pitch=pitch[int(value//10)],volume=100).play()
                 sleep (DELAY_SEC)
     except BaseException:
