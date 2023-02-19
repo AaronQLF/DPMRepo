@@ -6,7 +6,7 @@ It must be run on the robot.
 """
 
 from utils import sound
-from utils.brick import TouchSensor, EV3UltrasonicSensor, wait_ready_sensors, reset_brick
+from utils.brick import TouchSensor, EV3UltrasonicSensor, wait_ready_sensors, reset_brick,Motor,SpeedRPM
 from time import sleep
 
 DELAY_SEC = 0.01  # seconds of delay between measurements
