@@ -30,6 +30,7 @@ def continuous_sound_touch_sensor():
                 if value is not None :
                     if (value > 40):
                         Motor.set_power(100)
+                    print("Distance: ", value)
                     sound.Sound(duration=0.3,pitch=pitch[int(value//10)],volume=100).play()
                 sleep (DELAY_SEC)
     except BaseException:
