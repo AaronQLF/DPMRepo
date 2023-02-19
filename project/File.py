@@ -41,7 +41,7 @@ def continuous_sound_touch_sensor():
                     print("Emergency Stop")
                     Motor.set_power(0)
                     break
-                    sleep (DELAY_SEC)
+                sleep (DELAY_SEC)
     except BaseException:
         print ("Done with the program")
         reset_brick()

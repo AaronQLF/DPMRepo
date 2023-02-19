@@ -24,14 +24,14 @@ def continuous_sound_touch_sensor():
     try :
         while (1):
             while (1):
-                value = ColorSensor.get_value()
+                value = ColorSensor.get_color_name()
                 #Checks whether the touch sensor is pressed
-                print("Color: ", ColorSensor.get_color_name)
+                print("Color: ",value)
+                sleep(DELAY_SEC)
                 if (EmergencyTouchSensor.is_pressed() == True):
                     print("Emergency Stop")
                     Motor.set_power(0)
                     break
-                    sleep (DELAY_SEC)
     except BaseException:
         print ("Done with the program")
         reset_brick()
