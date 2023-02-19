@@ -10,12 +10,11 @@ from utils.brick import TouchSensor, EV3UltrasonicSensor, wait_ready_sensors, re
 from time import sleep
 
 DELAY_SEC = 0.01  # seconds of delay between measurements
-US_SENSOR_DATA_FILE = "../data_analysis/us_sensor.csv"
 pitch =["Bb7","A#6","G#8","D#5"]
 print("Program start.\nWaiting for sensors to turn on...")
 TOUCH_SENSOR = TouchSensor(1)
 US_SENSOR = EV3UltrasonicSensor(2)
-Motor = Motor()
+Motor = Motor("D")
 wait_ready_sensors(True) # Input True to see what the robot is trying to initialize! False to be silent.
 print("Done waiting.")
 
