@@ -35,10 +35,10 @@ def continuous_sound_touch_sensor():
                     exit()
                 while not TOUCH_SENSOR.is_pressed():
                     value = US_SENSOR.get_value()
-                    if value is not none: # if None is givenm, then data collection failed that time
+                    if value is not None: # if None is givenm, then data collection failed that time
                         print(value)
                         if (value < 40):
-                            sound.Sound(pitch[value//10]).play()
+                            sound.Sound(pitch=pitch[value//10],duration=0.1,volume=60).play()
                         else :
                             Motor.set_power(30)           
                 sleep (DELAY_SEC)
